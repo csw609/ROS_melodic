@@ -15,7 +15,9 @@ oscillation_distance: 0.2
 # local planner DWA
 base_local_planner: "dwa_local_planner/DWAPlannerROS"
 
-# global planner navfn
-base_global_planner: "navfn/NavfnROS" #alternatives: global_planner/GlobalPlanner, carrot_planner/CarrotPlanner
+# global planner
+# base_global_planner: "navfn/NavfnROS"
+base_global_planner: "global_planner/GlobalPlanner"
+# base_global_planner: "carrot_planner/CarrotPlanner"
 
 recovery_behavior_enabled: false

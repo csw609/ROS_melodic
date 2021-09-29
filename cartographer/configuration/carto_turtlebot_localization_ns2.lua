@@ -5,13 +5,12 @@ options = {
   map_builder = MAP_BUILDER,
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
-  tracking_frame = "base_footprint",
-  publish_tracked_pose = true,
-  published_frame = "base_footprint",
-  odom_frame = "odom",
-  provide_odom_frame = true,
+  tracking_frame = "robot2_tf/base_footprint",
+  published_frame = "robot2_tf/odom",
+  odom_frame = "robot2_tf/odom",
+  provide_odom_frame = false,
   publish_frame_projected_to_2d = true,
-  use_odometry = false,
+  use_odometry = true,
   use_nav_sat = false,
   use_landmarks = false,
   num_laser_scans = 1,
@@ -40,9 +39,6 @@ TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 10.
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight = 1e-1
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.2)
-TRAJECTORY_BUILDER.pure_localization_trimmer = {
-  max_submaps_to_keep = 3,
-}
 -- range 1 is good value
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1
 POSE_GRAPH.constraint_builder.min_score = 0.65
@@ -55,5 +51,4 @@ MAP_BUILDER.num_background_threads = 12
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.5 * POSE_GRAPH.constraint_builder.sampling_ratio
 POSE_GRAPH.global_sampling_ratio = 0.1 * POSE_GRAPH.global_sampling_ratio
 POSE_GRAPH.max_num_final_iterations = 1
-
 return options

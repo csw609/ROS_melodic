@@ -1,10 +1,10 @@
 GlobalPlanner:                                  # http://wiki.ros.org/global_planner
   old_navfn_behavior: false                     # If for some reason, you want global_planner to exactly mirror the behavior of navfn, set this to true (and use the defaults for the other boolean parameters)
   use_quadratic: true                           # If true, use the quadratic approximation of the potential. Otherwise, use a simpler calculation.
-  use_dijkstra: false                            # If true, use dijkstra's algorithm. Otherwise, A*.
+  use_dijkstra: true                            # If true, use dijkstra's algorithm. Otherwise, A*.
   use_grid_path: false                          # If true, create a path that follows the grid boundaries. Otherwise, use a gradient descent method.
   
-  allow_unknown: false                           # if true plan include unknown space, also Need track_unknown_space: true in costmap_commons_param
+  allow_unknown: true                           # if true plan include unknown space, also Need track_unknown_space: true in costmap_commons_param
   planner_window_x: 0.0
   planner_window_y: 0.0
   default_tolerance: 0.0                        # A tolerance on the goal point for the planner. The planner will attempt to create a plan that is as close to the specified goal as possible but no further than default_tolerance away.

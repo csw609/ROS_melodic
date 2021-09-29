@@ -3,10 +3,10 @@
    <master auto="start"/>
 <group ns="ns1">
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/local_costmap_params.yaml" command="load" />
-    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/global_costmap_params.yaml" command="load" /> 
+    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/global_costmap_params.yaml" command="load" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/dwa_local_planner_params.yaml" command="load" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/move_base_params.yaml" command="load" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns1/global_planner_params.yaml" command="load" />
@@ -15,10 +15,10 @@
 
 <group ns="ns2">
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/local_costmap_params.yaml" command="load" />
-    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/global_costmap_params.yaml" command="load" /> 
+    <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/global_costmap_params.yaml" command="load" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/dwa_local_planner_params.yaml" command="load" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/move_base_params.yaml" command="load" />
     <rosparam file="/home/csw/catkin_ws/src/navigation/move_base/params/jetbot_multi/ns2/global_planner_params.yaml" command="load" />

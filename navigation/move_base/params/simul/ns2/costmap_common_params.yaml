@@ -30,7 +30,7 @@ obstacle_layer:
 inflation_layer:
   enabled:              true
   cost_scaling_factor:  10.0
-  inflation_radius:     0.20  # The radius in meters to which the map inflates obstacle cost values.
+  inflation_radius:     0.1  # The radius in meters to which the map inflates obstacle cost values.
 
 static_layer:
   enabled:              true

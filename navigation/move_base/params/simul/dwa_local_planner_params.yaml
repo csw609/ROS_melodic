@@ -1,14 +1,14 @@
 DWAPlannerROS:
 
 # Robot Configuration Parameters - turtlebot3_simulation
-  max_vel_x: 1.0
-  min_vel_x: 0.2
+  max_vel_x: 0.3
+  min_vel_x: 0.05
   acc_lim_x: 1.0
 
-  max_vel_theta: 2.0
-  min_vel_theta: -2.0
+  max_vel_theta: 1.0
+  min_vel_theta: -1.0
   acc_lim_th: 2.0
-  theta_stopped_vel: 0.4
+  theta_stopped_vel: 0.1
 
   max_vel_trans: 0.5
   min_vel_trans: 0.1

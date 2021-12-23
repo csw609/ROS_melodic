@@ -1,0 +1,55 @@
+<launch>
+<arg name="map_file" default="lego2"/>
+# group ns1
+<group ns="ns1">
+  <!--Cartographer node with custom configuration file, premade pbstreakm-->
+    <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="
+          -configuration_directory
+              $(find cartographer_ros)/configuration_files
+          -configuration_basename carto_rp_localization_ns1.lua
+	  -load_state_filename /home/csw/map/$(arg map_file).pbstream" output="screen"> </node>
+
+<!--node which converts Cartographer map into ROS occupancy grid map.-->
+    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+<!-- provide tf base to scan -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="base_to_scan_ns1" args="0 0 0 0 0 0 base_footprint_ns1 scan_ns1" />
+
+</group>
+
+# group ns2
+<group ns="ns2">
+  <!--Cartographer node with custom configuration file, premade pbstreakm-->
+    <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="
+          -configuration_directory
+              $(find cartographer_ros)/configuration_files
+          -configuration_basename carto_rp_localization_ns2.lua
+	  -load_state_filename /home/csw/map/$(arg map_file).pbstream" output="screen"> </node>
+
+<!--node which converts Cartographer map into ROS occupancy grid map.-->
+    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+<!-- provide tf base to scan -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="base_to_scan_ns2" args="0 0 0 0 0 0 base_footprint_ns2 scan_ns2" />
+
+</group>
+
+# group ns3
+<group ns="ns3">
+  <!--Cartographer node with custom configuration file, premade pbstreakm-->
+    <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="
+          -configuration_directory
+              $(find cartographer_ros)/configuration_files
+          -configuration_basename carto_rp_localization_ns3.lua
+	  -load_state_filename /home/csw/map/$(arg map_file).pbstream" output="screen"> </node>
+
+<!--node which converts Cartographer map into ROS occupancy grid map.-->
+    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+<!-- provide tf base to scan -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="base_to_scan_ns3" args="0 0 0 0 0 0 base_footprint_ns3 scan_ns3" />
+
+</group>
+
+
+<!-- run the preset rviz -->
+<node name="rviz" pkg="rviz" type="rviz" args="-d /home/csw/carto_ws/src/carto_rp_multi.rviz" />
+
+</launch>

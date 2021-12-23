@@ -1,0 +1,10 @@
+<launch>
+<group ns="ns1">
+    <node name="goal_pub"   pkg="multi_robot_ros"  type="goal_pub" output="screen">
+    </node>
+</group>
+<group ns="ns3">
+    <node name="goal_pub"   pkg="multi_robot_ros"  type="goal_pub" output="screen">
+    </node>
+</group>
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+    <arg name="map" default="ttt"/>
+
+    <node name="test_pub"   pkg="multi_robot_ros"  type="test_pub" output="screen">
+    </node>
+
+    <node name="map_server" pkg="map_server" type="map_server" args="/home/csw/map/$(arg map).yaml" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d /home/csw/rviz/test_pub.rviz" />
+</launch>

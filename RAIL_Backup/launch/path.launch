@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="path_pub"   pkg="multi_robot_ros"  type="path_pub" output="screen">
+    </node>
+
+    <!-- provide tf base to scan -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base_to_scan" args="0 0 0 0 0 0 map base_footprint" />
+
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+
+<group ns="ns1">
+    <node name="goal_make_pub_multi"   pkg="multi_robot_ros"  type="goal_make_pub_multi" output="screen">
+    </node>
+</group>
+
+<group ns="ns2">
+    <node name="goal_make_pub_multi"   pkg="multi_robot_ros"  type="goal_make_pub_multi" output="screen">
+    </node>
+</group>
+
+</launch>
